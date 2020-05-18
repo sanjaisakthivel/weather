@@ -1,0 +1,60 @@
+
+body{	    background-image:url('android-weather-apps.png');
+		    background-color:#cccccc;
+		    background-size: 150% 210%;
+		    display: inline;
+	}
+	h1 {
+  font-size: 40px;
+}
+
+
+ .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#Citi{
+	padding: 15px 32px;
+	font-size: 16px;
+  margin: 4px 2px;
+  font-size: 40px;
+	}
+	
+	
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  height: 20% ;
+  border: 30px ;
+  padding: 15px;
+ 
+ 
+  }
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 30px 35px;
+  text-decoration: none;
+  height: 20% ;
+   
+}
+
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  height: 20% ;
+ 
+}

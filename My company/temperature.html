@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery.getJSON demo</title>
+  <style type="text/css">
+    span{
+      color: brown;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <link rel="stylesheet" type+"text/css" href="main.css">
+</head>
+<body>
+ <center><div class ="topnav">
+    <input type="text" id="Citi"
+    placeholder="Search..">
+    <button type="button" class='button' onclick="getInputValue();">search</button>
+  </div>
+ </center>
+<div id="apiData">
+<center> 
+  <h1>Location:<span id="City"></span></h1>
+  <h1>Temperature:<span id="Temperature"></span></h1>
+  <h1>Humidity:<span id="Humidity"></span></h1>
+  <h1>WeatherDescription:<span id="WeatherDescription"></span></h1>
+  <h1>WindDirectionDegree: <span id="WindDirectionDegree"></span></h1>
+  <h1>WindSpeed:<span id="WindSpeed"></span></h1>
+  </center>
+</div>
+ 
+<script>
+  function getInputValue(){
+    var citi = document.getElementById("Citi").value;
+    var API_URL //= "http://restapi.demoqa.com/utilities/weather/city/";   
+    API_URL = "http://restapi.demoqa.com/utilities/weather/city/"+citi;   
+  
+    //console.log(citi);
+  $.getJSON( API_URL, function(data){
+   console.log(data);
+    let Temperature = data.Temperature;
+    let City = data.City;
+    let Humidity =data.Humidity;
+    let WeatherDescription =data.WeatherDescription;
+    let WindDirectionDegree =data.WindDirectionDegree;
+    let WindSpeed=data.WindSpeed;
+    //document.write("City:"+City);
+   // document.write("Temperature:"+Temperature);
+   $('#City').html(City);
+   $('#Temperature').html(Temperature);
+   $('#Humidity').html(Humidity);
+   $('#WeatherDescription').html(WeatherDescription);
+   $('#WindDirectionDegree').html(WindDirectionDegree);
+   $('#WindSpeed').html(WindSpeed);
+
+ 
+  });
+  }
+
+    
+
+</script>
+ 
+</body>
+</html>
